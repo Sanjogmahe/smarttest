@@ -1,0 +1,340 @@
+ID,Test Case Title 
+654,Verify that functionlity A is working as expected.
+53,Verify that functionlity M is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+891,Verify that new shipment is created
+900,Verify that bonus payout feature is correct
+555,Verify auto expiry notifications
+637,Verify that clone feature is working as expected
+669,Verify that transportation activities is setup correctly
+281,Test to ensure debit details
+819,Verify the system settings parameters
+579,Verify that functionlity P is working as expected.
+141,Verify the reports generated in dashboard
+769,Verify new user registration
+954,Verify existing user re registration
+349,Verify new data and term addition details
+403,Test different methods of routing
+846,Verify that functionlity M is working as expected.
+612,Test addition of new customisation for each partner
+36,Test to conduct on various merchants
+410,Verify that user is able to create claims
+171,Verify the cheque credit process is as expected
+794,Test voucher schemes
+698,Test email functionality
+57,Verify that requsition email is generated correctly
+219,Verify contents module is working as expected
+139,Verify disclaimer section is correct
+67,Verify that functionlity P is working as expected.
+118,Verify SQL injection is not happening
+874,Verify user is able to create new life insurance policy
+140,Verify functions data is add 
+173,Test to ensure billing module is working as expected
+91,Test different methods of routing
+675,Verify that functionlity M is working as expected.
+584,Test addition of new customisation for each partner
+528,Verify that user is able to create claims
+497,Test to conduct on various merchants
+596,Verify data extract and renewal is correct
+847,Verify auto expiry notifications
+942,Test resume and playback feature
+189,Verify that transportation activities is setup correctly
+406,Verify auto debit notifications
+309,Verify auto upgradation feature
+963,Verify customer feedback module
+252,Verify auto pass feature
+838,Verify that functionlity L is working as expected.
+484,Test to verify sales user authorisation
+38,Verify new data and term addition details
+743,Verify landlord insurance policy creation
+199,Test customisation portal
+878,Test addition of new customisation for each partner
+16,Verify that user is able to create claims
+993,Test to conduct on various merchants
+353,Verify merchant invoice generation
+487,Test voucher schemes
+640,Verify business motor insurance renewal process is correct
+992,Verify that requsition email is generated correctly
+448,Verify contents module is working as expected
+226,Verify the system settings parameters
+973,Verify customer feedback module
+264,Verify the reports generated in dashboard
+814,Verify update flag is modified when policy is edited
+932,Test to verify sales user authorisation
+949,Verify new record is created in database
+12,Verify landlord insurance policy and be modified
+654,Verify that functionlity A is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+654,Verify that functionlity A is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+654,Verify that functionlity A is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+528,Verify that user is able to create claims
+38,Verify new data and term addition details
+67,Verify that functionlity P is working as expected.
+654,Verify that functionlity A is working as expected.
+891,Verify that new shipment is created
+579,Verify that functionlity P is working as expected.
+846,Verify that functionlity M is working as expected.
+67,Verify that functionlity P is working as expected.
+654,Verify that functionlity A is working as expected.
+891,Verify that new shipment is created
+579,Verify that functionlity P is working as expected.
+846,Verify that functionlity M is working as expected.
+67,Verify that functionlity P is working as expected.
+654,Verify that functionlity A is working as expected.
+891,Verify that new shipment is created
+900,Verify that bonus payout feature is correct
+900,Verify that bonus payout feature is correct
+900,Verify that bonus payout feature is correct
+637,Verify that clone feature is working as expected
+669,Verify that transportation activities is setup correctly
+171,Verify the cheque credit process is as expected
+794,Test voucher schemes
+698,Test email functionality
+57,Verify that requsition email is generated correctly
+900,Verify that bonus payout feature is correct
+637,Verify that clone feature is working as expected
+669,Verify that transportation activities is setup correctly
+171,Verify the cheque credit process is as expected
+794,Test voucher schemes
+698,Test email functionality
+57,Verify that requsition email is generated correctly
+819,Verify the system settings parameters
+141,Verify the reports generated in dashboard
+769,Verify new user registration
+954,Verify existing user re registration
+819,Verify the system settings parameters
+141,Verify the reports generated in dashboard
+769,Verify new user registration
+954,Verify existing user re registration
+654,Verify that functionlity A is working as expected.
+53,Verify that functionlity M is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+891,Verify that new shipment is created
+900,Verify that bonus payout feature is correct
+555,Verify auto expiry notifications
+637,Verify that clone feature is working as expected
+669,Verify that transportation activities is setup correctly
+281,Test to ensure debit details
+819,Verify the system settings parameters
+579,Verify that functionlity P is working as expected.
+141,Verify the reports generated in dashboard
+769,Verify new user registration
+954,Verify existing user re registration
+349,Verify new data and term addition details
+403,Test different methods of routing
+846,Verify that functionlity M is working as expected.
+612,Test addition of new customisation for each partner
+36,Test to conduct on various merchants
+410,Verify that user is able to create claims
+171,Verify the cheque credit process is as expected
+794,Test voucher schemes
+698,Test email functionality
+57,Verify that requsition email is generated correctly
+219,Verify contents module is working as expected
+139,Verify disclaimer section is correct
+67,Verify that functionlity P is working as expected.
+118,Verify SQL injection is not happening
+874,Verify user is able to create new life insurance policy
+140,Verify functions data is add 
+173,Test to ensure billing module is working as expected
+91,Test different methods of routing
+675,Verify that functionlity M is working as expected.
+584,Test addition of new customisation for each partner
+528,Verify that user is able to create claims
+497,Test to conduct on various merchants
+596,Verify data extract and renewal is correct
+847,Verify auto expiry notifications
+942,Test resume and playback feature
+189,Verify that transportation activities is setup correctly
+406,Verify auto debit notifications
+309,Verify auto upgradation feature
+963,Verify customer feedback module
+252,Verify auto pass feature
+838,Verify that functionlity L is working as expected.
+484,Test to verify sales user authorisation
+38,Verify new data and term addition details
+743,Verify landlord insurance policy creation
+199,Test customisation portal
+878,Test addition of new customisation for each partner
+16,Verify that user is able to create claims
+993,Test to conduct on various merchants
+353,Verify merchant invoice generation
+487,Test voucher schemes
+640,Verify business motor insurance renewal process is correct
+992,Verify that requsition email is generated correctly
+448,Verify contents module is working as expected
+226,Verify the system settings parameters
+973,Verify customer feedback module
+264,Verify the reports generated in dashboard
+814,Verify update flag is modified when policy is edited
+932,Test to verify sales user authorisation
+949,Verify new record is created in database
+12,Verify landlord insurance policy and be modified
+654,Verify that functionlity A is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+654,Verify that functionlity A is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+654,Verify that functionlity A is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+528,Verify that user is able to create claims
+38,Verify new data and term addition details
+67,Verify that functionlity P is working as expected.
+654,Verify that functionlity A is working as expected.
+891,Verify that new shipment is created
+579,Verify that functionlity P is working as expected.
+846,Verify that functionlity M is working as expected.
+67,Verify that functionlity P is working as expected.
+654,Verify that functionlity A is working as expected.
+891,Verify that new shipment is created
+579,Verify that functionlity P is working as expected.
+846,Verify that functionlity M is working as expected.
+67,Verify that functionlity P is working as expected.
+654,Verify that functionlity A is working as expected.
+891,Verify that new shipment is created
+900,Verify that bonus payout feature is correct
+900,Verify that bonus payout feature is correct
+900,Verify that bonus payout feature is correct
+637,Verify that clone feature is working as expected
+669,Verify that transportation activities is setup correctly
+171,Verify the cheque credit process is as expected
+794,Test voucher schemes
+698,Test email functionality
+57,Verify that requsition email is generated correctly
+900,Verify that bonus payout feature is correct
+637,Verify that clone feature is working as expected
+669,Verify that transportation activities is setup correctly
+171,Verify the cheque credit process is as expected
+794,Test voucher schemes
+698,Test email functionality
+57,Verify that requsition email is generated correctly
+819,Verify the system settings parameters
+141,Verify the reports generated in dashboard
+769,Verify new user registration
+954,Verify existing user re registration
+819,Verify the system settings parameters
+141,Verify the reports generated in dashboard
+769,Verify new user registration
+954,Verify existing user re registration
+654,Verify that functionlity A is working as expected.
+53,Verify that functionlity M is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+891,Verify that new shipment is created
+900,Verify that bonus payout feature is correct
+555,Verify auto expiry notifications
+637,Verify that clone feature is working as expected
+669,Verify that transportation activities is setup correctly
+281,Test to ensure debit details
+819,Verify the system settings parameters
+579,Verify that functionlity P is working as expected.
+141,Verify the reports generated in dashboard
+769,Verify new user registration
+954,Verify existing user re registration
+349,Verify new data and term addition details
+403,Test different methods of routing
+846,Verify that functionlity M is working as expected.
+612,Test addition of new customisation for each partner
+36,Test to conduct on various merchants
+410,Verify that user is able to create claims
+171,Verify the cheque credit process is as expected
+794,Test voucher schemes
+698,Test email functionality
+57,Verify that requsition email is generated correctly
+219,Verify contents module is working as expected
+139,Verify disclaimer section is correct
+67,Verify that functionlity P is working as expected.
+118,Verify SQL injection is not happening
+874,Verify user is able to create new life insurance policy
+140,Verify functions data is add 
+173,Test to ensure billing module is working as expected
+91,Test different methods of routing
+675,Verify that functionlity M is working as expected.
+584,Test addition of new customisation for each partner
+528,Verify that user is able to create claims
+497,Test to conduct on various merchants
+596,Verify data extract and renewal is correct
+847,Verify auto expiry notifications
+942,Test resume and playback feature
+189,Verify that transportation activities is setup correctly
+406,Verify auto debit notifications
+309,Verify auto upgradation feature
+963,Verify customer feedback module
+252,Verify auto pass feature
+838,Verify that functionlity L is working as expected.
+484,Test to verify sales user authorisation
+38,Verify new data and term addition details
+743,Verify landlord insurance policy creation
+199,Test customisation portal
+878,Test addition of new customisation for each partner
+16,Verify that user is able to create claims
+993,Test to conduct on various merchants
+353,Verify merchant invoice generation
+487,Test voucher schemes
+640,Verify business motor insurance renewal process is correct
+992,Verify that requsition email is generated correctly
+448,Verify contents module is working as expected
+226,Verify the system settings parameters
+973,Verify customer feedback module
+264,Verify the reports generated in dashboard
+814,Verify update flag is modified when policy is edited
+932,Test to verify sales user authorisation
+949,Verify new record is created in database
+12,Verify landlord insurance policy and be modified
+654,Verify that functionlity A is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+654,Verify that functionlity A is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+654,Verify that functionlity A is working as expected.
+903,Verify that API response for M1 is correct
+730,Verify that user is able to create claims
+528,Verify that user is able to create claims
+38,Verify new data and term addition details
+67,Verify that functionlity P is working as expected.
+654,Verify that functionlity A is working as expected.
+891,Verify that new shipment is created
+579,Verify that functionlity P is working as expected.
+846,Verify that functionlity M is working as expected.
+67,Verify that functionlity P is working as expected.
+654,Verify that functionlity A is working as expected.
+891,Verify that new shipment is created
+579,Verify that functionlity P is working as expected.
+846,Verify that functionlity M is working as expected.
+67,Verify that functionlity P is working as expected.
+654,Verify that functionlity A is working as expected.
+891,Verify that new shipment is created
+900,Verify that bonus payout feature is correct
+900,Verify that bonus payout feature is correct
+900,Verify that bonus payout feature is correct
+637,Verify that clone feature is working as expected
+669,Verify that transportation activities is setup correctly
+171,Verify the cheque credit process is as expected
+794,Test voucher schemes
+698,Test email functionality
+57,Verify that requsition email is generated correctly
+900,Verify that bonus payout feature is correct
+637,Verify that clone feature is working as expected
+669,Verify that transportation activities is setup correctly
+171,Verify the cheque credit process is as expected
+794,Test voucher schemes
+698,Test email functionality
+57,Verify that requsition email is generated correctly
+819,Verify the system settings parameters
+141,Verify the reports generated in dashboard
+769,Verify new user registration
+954,Verify existing user re registration
+819,Verify the system settings parameters
+141,Verify the reports generated in dashboard
+769,Verify new user registration
+954,Verify existing user re registration
