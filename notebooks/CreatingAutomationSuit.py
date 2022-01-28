@@ -132,7 +132,7 @@ for i in range(len(master_dataframe[1])):
         all_tc.append((master_dataframe[0][i], master_dataframe[1][i], master_dataframe[2][i]))
         all_info_tc.append((master_dataframe[0][i], master_dataframe[1][i], master_dataframe[2][i],master_dataframe[3][i],master_dataframe[4][i],master_dataframe[5][i]))
 
-limit = 200
+limit = int(input("Insert the Limit: "))
 
 if limit ==0:
     pd.DataFrame(all_tc, columns=["Test ID", "Test case Title", "Automation Script Name"]).to_excel(writer,
