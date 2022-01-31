@@ -14,7 +14,8 @@ dataset = pd.read_excel('TestData _MasterInput_0.3.xlsx')
 
 modules = input("Insert Selected Modules or leave it blank : ") #['TNT', 'CFE']
 modules = modules.split(sep=',')
-if modules != '':
+if modules != ['']:
+    print('inside')
     dataset = dataset[dataset.Module.isin(modules)]
 
 ## Extracting The release ID
