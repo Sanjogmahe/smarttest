@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/static/stylepage.css">
+ 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</head>
+
+ <body>
+    
+    <div class="column left" style="background-color:#ffffff;">
+        <div class="box1">
+            <h2>SmarTest Tool</h2>
+
+            <div class="box">
+                                
+                <div class="wrapper1">
+                    <div><t2>Source System</t2></div>
+                    <div>
+                        <input type="radio" id="JIRA" name="source_system" value="JIRA"><label for="JIRA">JIRA</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="ALM" name="source_system" value="ALM"><label for="ALM">ALM</label>
+                    </div>
+                    <div><a href="login_popup"><button class="button button1">Login</button></a></div>
+                </div>
+
+                <div class="wrapper2">
+                    <div><t2>Extract Raw Data</t2></div>
+                    <div><button class="button button1" onclick="move(1, false)">Extract</button></div>
+                    <div class="progress" style="width: 50%; margin: 10px;">
+                        <div id="prog_1" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                            <span id="prog_1_lable" class="progress-bar-label">0%</span>
+                        </div>
+                    </div>
+                
+                    <div><t2>Create Master Input Sheet</t2></div>
+                    <div><button class="button button1" onclick="move(2, false)">Create</button></div>
+                    <div class="progress" style="width: 50%; margin: 10px;">
+                        <div id="prog_2" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                            <span id="prog_2_lable" class="progress-bar-label">0%</span>
+                        </div>
+                    </div>
+
+                    <div><t2>Run Smart Test</t2></div>
+                    <div><button class="button button1" onclick="move(3, false)">Execute</button></div>
+                    <div class="progress" style="width: 50%; margin: 10px;">
+                        <div id="prog_3" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                            <span id="prog_3_lable" class="progress-bar-label">0%</span>
+                        </div>
+                    </div>
+
+                    <div><t2>View Output File</t2></div>
+                    <div><button class="button button1" onclick="move(4, true)">Output</button></div>
+                    <div class="progress" style="width: 50%; margin: 10px;">
+                        <div id="prog_4" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                            <span id="prog_4_lable" class="progress-bar-label">0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div><p id="msg" style="color:black"></p></div>
+                <div class="wrapper3">
+                    <div><button id="copyBtn" class="button button2" hidden onclick="clickcopy()">Copy</button></div>
+                </div>
+                 <!--<div><p id="msg"></p></div> -->
+            </div> 
+        </div>
+    </div>
+
+<!--       
+    <div class="column right" style="background-color:#ffffff;">
+        <h2>Data</h2>
+        <table class="table">
+            <tr class="table__header">
+                {% for header in headings %}
+                <th class="table__cell">{{ header }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in data %}
+            <tr class="table__row">
+                {% for cell in row %}
+                <td class="table__cell">{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    clearInterval(id);
+-->
+
+<script>
+
+    function move(i, enableCopyBtn) {        
+        var width = 10;
+        var id = setInterval(frame, 100);
+        qi = "#prog_"+i
+        lqi = qi + "_lable"
+        function frame() {
+            if (width >= 100) {
+               //width =0;
+               clearInterval(id);
+               // $(qi).css('width', width+'%').attr('aria-valuenow', width);
+               // $(lqi).text(width+'%');
+               if(enableCopyBtn == true) {
+                document.getElementById("copyBtn").hidden = false;
+                document.getElementById("msg").innerHTML = "Output available at C:/SmarTest/OutData/"
+               }
+               
+            }
+            else {
+                width++; 
+                $(qi).css('width', width+'%').attr('aria-valuenow', width);
+                $(lqi).text(width+'%');
+            }
+        }
+    }
+    function clickcopy() {
+    document.getElementById("msg").innerHTML = "Copied";
+    }
+
+</script>
+
+
+
+</body>
+</html>

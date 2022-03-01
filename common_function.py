@@ -126,6 +126,10 @@ def clear(xpath):
 def wait(x):
     driver.implicitly_wait(x)
 
+def ewait(x):
+    import time
+    time.sleep(x)
+
 def iframe(frame):
     ifram = driver.find_element(By.XPATH, frame)
     driver.switch_to.frame(ifram)

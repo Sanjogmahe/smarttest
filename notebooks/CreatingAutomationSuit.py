@@ -3,8 +3,7 @@ import xlsxwriter
 import ctypes  # An included library with Python install.
 
 def Mbox(text, title='Smart Test', style=0):
-    # return ctypes.windll.user32.MessageBoxW(0, text, title, style)
-    return 1
+    return ctypes.windll.user32.MessageBoxW(0, text, title, style)
 
 ## SmarTest using test Prioritization Method
 ## Reading The Data file
@@ -12,11 +11,11 @@ Mbox("The master file is ready for execution..!")
 # dataset = pd.read_excel('SampleTestData.xlsx')
 dataset = pd.read_excel('TestData _MasterInput_0.3.xlsx')
 
-modules = input("Insert Selected Modules or leave it blank : ") #['TNT', 'CFE']
-modules = modules.split(sep=',')
-if modules != ['']:
-    print('inside')
-    dataset = dataset[dataset.Module.isin(modules)]
+# modules = input("Insert Selected Modules or leave it blank : ") #['TNT', 'CFE']
+# modules = modules.split(sep=',')
+# if modules != ['']:
+#     print('inside')
+#     dataset = dataset[dataset.Module.isin(modules)]
 
 ## Extracting The release ID
 unique_release = dataset['Release ID'].unique()
@@ -154,7 +153,7 @@ else:
     master = limited_test.sort_values(by=["Test Priority",  "Severity Defects","Linked Defects"], ignore_index=False)
     final = []
     for i in range(len(master["Test ID"])):
-        final.append((master["Test ID"][i], master["Test case Title"][i],master["Automation Script Name"][i], master['module'])[i])
+        final.append((master["Test ID"][i], master["Test case Title"][i],master["Automation Script Name"][i], master['Module'][i]))
     master_dataframe = pd.DataFrame(final, columns=["Test ID", "Test case Title", "Automation Script Name",'Module'])
     master_dataframe = master_dataframe.head(limit)
     master_dataframe.to_excel(writer, sheet_name="Master_Output",index=False)
@@ -174,7 +173,7 @@ else:
         if df['Automation Script Name'][i] == "Manual Testing":
             m_tc.append((df['Test ID'][i], df['Test case Title'][i], df['Module'][i]))
         else:
-            a_tc.append(df['Automation Script Name'][i], df['Module'][i])
+            a_tc.append((df['Automation Script Name'][i], df['Module'][i]))
 
 df_auto = pd.DataFrame(set(a_tc), columns=["Automation Script Name", "Module"])
 df_auto.index += 1
