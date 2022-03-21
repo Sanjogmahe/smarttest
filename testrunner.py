@@ -19,42 +19,74 @@ url(yrl)
 ewait(2)
 
 ##Bugs
-# for i in range(16,20):
-#
-#     clear("//textarea[@id='advanced-search']")
-#     ewait(1)
-#     justEnt("//textarea[@id='advanced-search']","project = \"ABS Sahara \" AND fixVersion in (\"Release "+str(i)+"\") AND type not in (Story,Task,Epic,Test,Sub-task,\"Incident-SNOW \",\"Incident (Sub-task)\",Incident) AND status not in (Descoped)")
-#     ewait(1)
-#     justCli("//button[contains(text(),'Search')]")
-#     ewait(4)
-#
-#     justCli("//button[@id='AJS_DROPDOWN__81']")
-#     ewait(2)
-#     justCli("//a[@id='allCsvFields']")
-#     ewait(2)
-#     justCli("//button[@id='csv-export-dialog-export-button']")
-#     ewait(35)
+for i in range(16,20):
+
+    clear("//textarea[@id='advanced-search']")
+    ewait(1)
+    justEnt("//textarea[@id='advanced-search']","project = \"ABS Sahara \" AND fixVersion in (\"Release "+str(i)+"\") AND type not in (Story,Task,Epic,Test,Sub-task,\"Incident-SNOW \",\"Incident (Sub-task)\",Incident) AND status not in (Descoped)")
+    ewait(1)
+    justCli("//button[contains(text(),'Search')]")
+    ewait(4)
+
+    justCli("//button[@id='AJS_DROPDOWN__81']")
+    ewait(2)
+    justCli("//a[@id='allExcelFields']")
+    ewait(2)
+    # justCli("//button[@id='csv-export-dialog-export-button']")
+    ewait(35)
 
 
 ##Story
-# for i in range(16,20):
-#
-#     clear("//textarea[@id='advanced-search']")
-#     ewait(1)
-#     justEnt("//textarea[@id='advanced-search']","project = \"ABS Sahara \" AND fixVersion in (\"Release "+str(i)+"\") AND type not in (Bug,Task,Epic,Test,Sub-task,\"Incident-SNOW \",\"Incident (Sub-task)\",Incident) AND status not in (Descoped)")
-#     ewait(1)
-#     justCli("//button[contains(text(),'Search')]")
-#     ewait(4)
-#
-#     justCli("//button[@id='AJS_DROPDOWN__81']")
-#     ewait(2)
-#     justCli("//a[@id='allCsvFields']")
-#     ewait(2)
-#     justCli("//button[@id='csv-export-dialog-export-button']")
-#     ewait(35)
+for i in range(16,20):
+
+    clear("//textarea[@id='advanced-search']")
+    ewait(1)
+    justEnt("//textarea[@id='advanced-search']","project = \"ABS Sahara \" AND fixVersion in (\"Release "+str(i)+"\") AND type not in (Bug,Task,Epic,Test,Sub-task,\"Incident-SNOW \",\"Incident (Sub-task)\",Incident) AND status not in (Descoped)")
+    ewait(1)
+    justCli("//button[contains(text(),'Search')]")
+    ewait(4)
+
+    justCli("//button[@id='AJS_DROPDOWN__81']")
+    ewait(2)
+    justCli("//a[@id='allExcelFields']")
+    ewait(2)
+    # justCli("//button[@id='csv-export-dialog-export-button']")
+    ewait(35)
 # quit()
 
+# execution summary
+# justCli("//a[@id='aui-responsive-header-dropdown-0-trigger']")
+start_dates = ['01/Jun/21', '01/Jul/21', '01/Aug/21', '01/Sep/21', '01/Oct/21', '01/Nov/21', '01/Dec/21', '01/Jan/22']
+end_dates = ['30/Jun/21', '31/Jul/21', '31/Aug/21', '30/Sep/21', '31/Oct/21', '30/Nov/21', '31/Dec/21', '31/Jan/22']
 
+for i, j in zip(start_dates, end_dates):
+
+        justCli("//a[contains(text(),'Tests')]")
+        ewait(3)
+        justCli("//button[@id='ktm-module-report']")
+        ewait(3)
+        justCli("//span[contains(text(),'Test Execution')]")
+        ewait(3)
+        justCli("//a[contains(text(),'Test execution results (list)')]")
+        ewait(3)
+        clear("//body/div[@id='page']/div[@id='content']/div[1]/div[1]/reports-form[1]/div[1]/div[2]/div[1]/section[1]/reports-filters[1]/div[1]/reports-form-section[1]/div[1]/div[1]/reports-filter-none-condition[1]/div[1]/reports-form-section[1]/div[1]/div[1]/reports-form-box[1]/div[1]/reports-filter-by-date[1]/div[1]/reports-filter-by-date-between[1]/div[1]/aui-date-picker[1]/input[1]")
+        ewait(1)
+        justEnt("//body/div[@id='page']/div[@id='content']/div[1]/div[1]/reports-form[1]/div[1]/div[2]/div[1]/section[1]/reports-filters[1]/div[1]/reports-form-section[1]/div[1]/div[1]/reports-filter-none-condition[1]/div[1]/reports-form-section[1]/div[1]/div[1]/reports-form-box[1]/div[1]/reports-filter-by-date[1]/div[1]/reports-filter-by-date-between[1]/div[1]/aui-date-picker[1]/input[1]",
+                i)
+        ewait(1)
+        clear("//body/div[@id='page']/div[@id='content']/div[1]/div[1]/reports-form[1]/div[1]/div[2]/div[1]/section[1]/reports-filters[1]/div[1]/reports-form-section[1]/div[1]/div[1]/reports-filter-none-condition[1]/div[1]/reports-form-section[1]/div[1]/div[1]/reports-form-box[1]/div[1]/reports-filter-by-date[1]/div[1]/reports-filter-by-date-between[1]/div[2]/aui-date-picker[1]/input[1]")
+        ewait(1)
+        justEnt("//body/div[@id='page']/div[@id='content']/div[1]/div[1]/reports-form[1]/div[1]/div[2]/div[1]/section[1]/reports-filters[1]/div[1]/reports-form-section[1]/div[1]/div[1]/reports-filter-none-condition[1]/div[1]/reports-form-section[1]/div[1]/div[1]/reports-form-box[1]/div[1]/reports-filter-by-date[1]/div[1]/reports-filter-by-date-between[1]/div[2]/aui-date-picker[1]/input[1]",
+                j)
+        ewait(1)
+        justCli("//input[@id='allTestResults']")
+        ewait(3)
+        justCli("//button[contains(text(),'Generate')]")
+        ewait(3)
+        justCli("//body/div[@id='page']/div[@id='content']/div[1]/div[1]/reports-view[1]/reports-view-actions[1]/div[1]/div[1]/reports-data-set-export[1]/button[1]")
+        ewait(3)
+        justCli("//a[contains(text(),'Excel (dataset)')]")
+        ewait(100)
 
 # for i in range(len(output_read['Test Case Title '])):
 #     j = output_read['Test Case Title '][i]

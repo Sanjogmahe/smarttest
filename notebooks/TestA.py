@@ -10,15 +10,16 @@ import evalml
 # dataset = pd.read_excel('SampleTestData V0.2 113.xlsx')
 # dataset = pd.read_excel('Dummy Dataset0.3.xlsx')
 # dataset = pd.read_excel('SDMaster_input_Sheet.xlsx')
-dataset = pd.read_excel('SDMaster_input_Sheet_f.xlsx')
+dataset = pd.read_excel('InputSheet_Train.xlsx')
 final = dataset
 
+pred_data = pd.read_excel('InputSheet_Train_latest.xlsx')
 
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
 labelencoder = LabelEncoder()
 dataset['Release ID'] = labelencoder.fit_transform(dataset['Release ID'].astype(str))
-
+pred_data['Release ID'] = labelencoder.fit_transform(pred_data['Release ID'].astype(str))
 dataset.head()
 dataset.reset_index(inplace=True)
 
@@ -45,14 +46,35 @@ for i in range(dataset['Test Case Title'].shape[0]):
 
 print("**Corpus created successfully**")
 
+
+pred_corpus_title = []
+pstem = PorterStemmer()
+for i in range(pred_data['Test Case Title'].shape[0]):
+    # Remove unwanted words
+    text = re.sub("[^a-zA-Z]", ' ', pred_data['Test Case Title'][i])
+    # Transform words to lowercase
+    text = text.lower()
+    text = text.split()
+    # Remove stopwords then Stemming it
+    text = [pstem.stem(word) for word in text if not word in set(stopwords.words('english'))]
+    text = ' '.join(text)
+    # Append cleaned tweet to corpus
+    pred_corpus_title.append(text)
+
+print("**Prediction Corpus created successfully**")
+
 # Creating the Bag of Words model
 from sklearn.feature_extraction.text import CountVectorizer
 cv = CountVectorizer()
 text_vectors= cv.fit_transform(corpus_title).toarray()
+pred_text_vectors= cv.fit_transform(pred_corpus_title).toarray()
 
 #Convert text vectors into data frame
 text_vectors_df=pd.DataFrame(text_vectors)
 print("**Dimension for Text features are {}**".format(text_vectors_df.shape))
+
+pred_text_vectors_df=pd.DataFrame(pred_text_vectors)
+print("**Dimension for Prediction Text features are {}**".format(pred_text_vectors_df.shape))
 
 #Getting Target variable into Y variable
 y=dataset[['Target']].values
@@ -61,11 +83,13 @@ y=y.ravel()
 
 #Removing 'Target' and 'TestCaseTitle' columns from actual dataset
 dataset=dataset.drop(['Target','Test Case Title'],axis=1)
-
+pred_data=pred_data.drop(['Test Case Title'], axis=1)
 #Creating new data frame with all categorical feature and Text features for training classifier models
 X=pd.concat([dataset,text_vectors_df],axis=1).values
 print("**Dimension for features data frame are {}**".format(X.shape))
-#X.head()
+
+pred_X=pd.concat([pred_data,pred_text_vectors_df],axis=1).values
+print("**Dimension for pred features data frame are {}**".format(pred_X.shape))
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
@@ -90,7 +114,7 @@ scores = best_pipeline.score(X_test, y_test,  objectives=evalml.objectives.get_c
 
 # print(f'Accuracy Binary: {scores["Accuracy Binary"]}')
 
-y_pred = best_pipeline.predict(X)
+y_pred = best_pipeline.predict(pred_X)
 
 #writing file temporary format
 output = pd.DataFrame(y_pred)
